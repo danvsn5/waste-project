@@ -6,21 +6,12 @@ This project is a proof-of-concept system designed to detect and classify constr
 
 ## 🔧 Backend Setup
 
-The backend handles:
-
-- Sending images to the Roboflow-hosted model
-- Saving results (classifications, bounding boxes, etc.) to a JSON file
-
-### 1. Install dependencies
-
-Run:
+To setup:
 
 ```bash
 cd backend
 pip install -r requirements.txt
 ```
-
-### 2. Set up .env
 
 Create a .env file inside the backend/ folder with the following contents:
 
