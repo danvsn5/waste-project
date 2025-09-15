@@ -1,2 +1,5 @@
-inference-sdk
+FastAPI
+uvicorn
 python-dotenv
+inference-sdk
+requests
