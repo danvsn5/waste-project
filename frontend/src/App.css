@@ -40,3 +40,17 @@
 .read-the-docs {
   color: #888;
 }
+
+.json-output {
+  background: #1e1e1e;
+  color: #d4d4d4;
+  padding: 1em;
+  border-radius: 8px;
+  font-family: "Fira Mono", "Consolas", "Monaco", monospace;
+  font-size: 1em;
+  max-height: 300px;
+  overflow: auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1em;
+  text-align: left;
+}
