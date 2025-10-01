@@ -1,17 +1,23 @@
-// PieChartExample.tsx
 import React from "react";
 import { PieChart, Pie, Cell, Tooltip, Legend } from "recharts";
 
-const data = [
-  { name: "Concrete", value: 40 },
-  { name: "Wood", value: 25 },
-  { name: "Plastic", value: 20 },
-  { name: "Metal", value: 15 },
-];
-
 const COLORS = ["#8884d8", "#82ca9d", "#ffc658", "#ff7f50"];
 
-const PieChartExample = () => {
+const PieChartExample = ({ binInfo }) => {
+  // Prepare data from binInfo or use default if not available
+  const data = binInfo
+    ? Object.entries(binInfo)
+        .filter(([_, value]) => value > 0)
+        .map(([name, value]) => ({
+          name: name.charAt(0).toUpperCase() + name.slice(1),
+          value: value,
+        }))
+    : [
+        { name: "Timber", value: 0 },
+        { name: "Pipe", value: 0 },
+        { name: "Brick", value: 0 },
+      ];
+
   return (
     <PieChart width={400} height={300}>
       <Pie
